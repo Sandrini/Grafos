@@ -3,8 +3,14 @@ package estruturas;
 //pilha
 public class Stack {
 
-	//private int inicio; sempre = a 0
-	//private int fim; fim = tamanho - 1
+	/*
+	 * posicao inicial da pilha sempre igual a zero
+	 * posicao final igual ao tamanho -1
+	 * 
+	 * Pilha auto incrementavel, quando verifica que nao pode inserir um
+	 * novo objeto incrementa o valor da pilha
+	 */
+	
 	private int posicao;//posicao atual da pilha
 	private int tamanho;
 	private Object [] pilha;
@@ -13,8 +19,6 @@ public class Stack {
 		this.tamanho = tamanho;
 		pilha = new Object[tamanho];
 		posicao = -1;
-		//this.inicio = 0;
-		//this.fim = tamanho -1;
 	}
 	//verifica se a pilha esta vazia
 	public boolean isEmpty() {
@@ -29,7 +33,12 @@ public class Stack {
 		if (!isFull()) {
 			posicao++;
 			pilha[posicao] = obj;
-		}// else excecao pilha cheia
+		} else {
+			//se pilha estiver cheia...
+			//...aumenta tamanho da pilha e insere o novo objeto
+			stackGrown();
+			push(obj);
+		}
 	}
 	//remove o valor do topo
 	public Object pop() {
@@ -44,5 +53,15 @@ public class Stack {
 	//consulta o topo da pilha
 	public Object peak() {
 		return pilha[posicao];
+	}
+	//aumenta o tamanho da pilha
+	public void stackGrown() {
+		int newTamanho = tamanho + 1;
+		Object[] newPilha = new Object[newTamanho];
+		for (int i = 0; i < tamanho; i++) {
+			newPilha[i] = pilha[i];
+		}
+		tamanho = newTamanho;
+		pilha = newPilha;
 	}
 }
