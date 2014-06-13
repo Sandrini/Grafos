@@ -41,14 +41,14 @@ public class Dijkstra {
 				continue;
 			else
 				lista.set(vertice.getKey() - 1, true);
-			System.out.println("Elemento atual = "+vertice.getKey());
+			//System.out.println("Elemento atual = "+vertice.getKey());
 			//para cada adjacencia
 			for (Aresta a : vertice.getListaAresta()) {
 				Vertice adj = a.otherSide(vertice);
 				//pesso vertice adjacente
 				int pesoA = saida[adj.getKey() - 1][0];
 				int pesoB = a.getPeso() + saida[vertice.getKey() - 1][0];
-				System.out.println("PesoA: "+pesoA+"\tPesoB: "+pesoB);
+				//System.out.println("PesoA: "+pesoA+"\tPesoB: "+pesoB);
 				if (ehMaior(pesoA, pesoB)) {
 					saida[adj.getKey() - 1][0] = pesoB;
 					saida[adj.getKey() - 1][1] = vertice.getKey();

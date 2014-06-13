@@ -42,4 +42,16 @@ public class Grafo {
 		return null;
 	}
 	
+	public void addArestasToGrafo(Aresta a) {
+		
+		for (Vertice v: listaVertice) {
+			if(v.getKey() == a.getV1().getKey()) {
+				v.addAresta(a);
+				v.getOtherSide(a).addAresta(a);
+				break;
+			}
+		}
+		
+	}
+	
 }

@@ -29,25 +29,41 @@ public class Aplicacao {
 		g.addVertice(3.0, 3);
 		
 		//adiciona as arestas aos vertices
-		Aresta a1 = new Aresta(1, g.getVertice(1), g.getVertice(2));
-		Aresta a2 = new Aresta(1, g.getVertice(2), g.getVertice(3));
-		Aresta a3 = new Aresta(3, g.getVertice(1), g.getVertice(3));
+		g.addArestasToGrafo(new Aresta(1, g.getVertice(1), g.getVertice(2)));
+		g.addArestasToGrafo(new Aresta(1, g.getVertice(2), g.getVertice(3)));
+		g.addArestasToGrafo(new Aresta(3, g.getVertice(1), g.getVertice(3)));
 		
 		//adiciona as arestas aos vertices
+		/*
 		g.getVertice(1).addAresta(a1);
 		g.getVertice(1).addAresta(a3);
 		g.getVertice(2).addAresta(a2);
 		g.getVertice(2).addAresta(a1);
 		g.getVertice(3).addAresta(a2);
 		g.getVertice(3).addAresta(a3);
+		*/
 		
 		int[][] melhorCaminho = new int[g.getOrdem()][2]; 
 		melhorCaminho = new Dijkstra().shortPath(g.getVertice(1), g.getOrdem());
-		
+		System.out.println("Melhor caminho elemento 1");
 		for (int i = 0; i < g.getOrdem(); i++) {
 			int distancia = melhorCaminho[i][0];
 			int anterior = melhorCaminho[i][1];
-			System.out.println("Chave: "+(i + 1)+"\tdistancia: "+distancia+"\tanterior: "+anterior+"\n");
+			System.out.println("Chave: "+(i + 1)+"\tdistancia: "+distancia+"\tanterior: "+anterior);
+		}
+		System.out.println("\nMelhor caminho elemento 2");
+		melhorCaminho = new Dijkstra().shortPath(g.getVertice(2), g.getOrdem());
+		for (int i = 0; i < g.getOrdem(); i++) {
+			int distancia = melhorCaminho[i][0];
+			int anterior = melhorCaminho[i][1];
+			System.out.print("Chave: "+(i + 1)+"\tdistancia: "+distancia+"\tanterior: "+anterior+"\n");
+		}
+		System.out.println("\nMelhor caminho elemento 3");
+		melhorCaminho = new Dijkstra().shortPath(g.getVertice(3), g.getOrdem());
+		for (int i = 0; i < g.getOrdem(); i++) {
+			int distancia = melhorCaminho[i][0];
+			int anterior = melhorCaminho[i][1];
+			System.out.println("Chave: "+(i + 1)+"\tdistancia: "+distancia+"\tanterior: "+anterior);
 		}
 	}
 

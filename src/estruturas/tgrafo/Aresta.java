@@ -36,4 +36,12 @@ public class Aresta {
 		
 	}
 	
+	public Vertice getV1() {
+		return v1;
+	}
+	
+	public Vertice getV2() {
+		return v2;
+	}
+	
 }
