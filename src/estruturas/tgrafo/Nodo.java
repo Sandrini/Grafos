@@ -9,7 +9,7 @@ public class Nodo {
 	 */
 	
 	
-	Double valor;
+	private Double valor;
 	
 	public Nodo(Double valor) {
 		this.valor = valor;
