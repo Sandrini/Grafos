@@ -41,6 +41,10 @@ public class Vertice {
 		this.listaAresta = listaAresta;
 	}
 	
+	public void addAresta(Aresta a) {
+		listaAresta.add(a);
+	}
+	
 	public Vertice getOtherSide(Aresta a) {
 		/*
 		 * retorna o vertice do outro lado da aresta passada
