@@ -16,15 +16,15 @@ public class Grafo {
 	}
 	public void addVertice(int key, Double x, Double y) {
 		//adiciona um novo nodo quando conhece a chave
-		Nodo nodoVertice = new Nodo(x, y);
-		listaVertice.add(new Vertice(key, nodoVertice));
+		Nodo nodoVertice = new Nodo(key);
+		listaVertice.add(new Vertice(nodoVertice, x, y));
 	}
 	public void addVertice(Double x, Double y) {
 		//adiciona um novo nodo quando não conhece a chave
 		//neste caso as chaves devem ficar sequencias (1, 2, 3, 4)
-		Nodo nodoVertice = new Nodo(x, y);
-		int key = listaVertice.size();
-		listaVertice.add(new Vertice(key, nodoVertice));
+		int key = listaVertice.size() - 1;
+		Nodo nodoVertice = new Nodo(key);
+		listaVertice.add(new Vertice(nodoVertice, x, y));
 	}
 	
 	public int getOrdem() {

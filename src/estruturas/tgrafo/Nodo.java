@@ -8,23 +8,14 @@ public class Nodo {
 	 * entre as arestas
 	 */
 	
+	private int key;
 	
-	private Double cordenadaX;
-	private Double cordenadaY;
+	public Nodo(int key) {
+		this.key = key;
+	}
 	
-	public Nodo(Double x, Double y) {
-		this.cordenadaX = x;
-		this.cordenadaY = y;
+	public int getKey() {
+		return key;
 	}
-
-	public Double getCordenadaX() {
-		return cordenadaX;
-	}
-
-	public Double getCordenadaY() {
-		return cordenadaY;
-	}
-
-	
 	
 }

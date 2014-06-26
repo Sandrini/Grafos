@@ -22,7 +22,7 @@ public class Dijkstra {
 			saida[i][0] = -1.0;
 			saida[1][1] = -1.0;
 		}
-		//inicia com distancia até si de 0 e anterior inesistente
+		//inicia com distancia até si de 0 e anterior inexistente
 		//saida inicia em 0 enquanto vertice inicia em 1
 		saida[v.getKey()][0] = 0.0;
 		saida[v.getKey()][1] = -1.0;
@@ -43,7 +43,7 @@ public class Dijkstra {
 			//para cada adjacencia
 			for (Aresta a : vertice.getListaAresta()) {
 				Vertice adj = a.otherSide(vertice);
-				//pesso vertice adjacente
+				//peso vertice adjacente
 				double pesoA = saida[adj.getKey()][0];
 				double pesoB = a.getPeso() + saida[vertice.getKey()][0];
 				//System.out.println("PesoA: "+pesoA+"\tPesoB: "+pesoB);
@@ -52,7 +52,7 @@ public class Dijkstra {
 					saida[adj.getKey()][1] = vertice.getKey();
 				}
 				pilha.push(adj);
-			}
+			}//fim for each
 		}
 		return saida;
 	}//fim shot path

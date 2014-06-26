@@ -16,13 +16,15 @@ public class Vertice {
 	 */
 	
 	private Nodo nodo;
-	private int key;
 	private ArrayList<Aresta> listaAresta;
+	private double cordenadaX;
+	private double cordenadaY;
 	
-	public Vertice(int key, Nodo nodo) {
-		this.key = key;
+	public Vertice(Nodo nodo, double x, double y) {
 		this.nodo = nodo;
 		listaAresta = new ArrayList<>();
+		this.cordenadaX = x;
+		this.cordenadaY = y;
 	}
 
 	public Nodo getNodo() {
@@ -30,7 +32,7 @@ public class Vertice {
 	}
 
 	public int getKey() {
-		return key;
+		return nodo.getKey();
 	}
 
 	public ArrayList<Aresta> getListaAresta() {
@@ -63,4 +65,12 @@ public class Vertice {
 		}
 		return lista;
 	}
+	
+	public Double getCordenadaX() {
+		return cordenadaX;
+	}
+	public Double getCordenadaY() {
+		return cordenadaY;
+	}
+	
 }

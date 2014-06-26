@@ -47,15 +47,16 @@ public class Aplicacao {
 			g.addArestasToGrafo(new Aresta(c, g.getVertice(a), g.getVertice(b)));
 		}
 		/*
-		Vertice v = g.getVertice(0);
-		int i = 0;
+		Vertice v = g.getVertice(49);
+		
 		for (Aresta a : v.getListaAresta()) {
-			if (v.getOtherSide(a).getKey() == 49) {
-				System.out.println(a.getPeso());
+			if (v.getOtherSide(a).getKey() == 40) {
+				System.out.println(a.getDistancia()+" "+ a.otherSide(v).getKey());
 			}
 			//System.out.println(v.getOtherSide(a).getKey());
 		}
 		*/
+		
 		
 		double[][] melhorCaminho = new double[g.getOrdem()][2]; 
 		melhorCaminho = new Dijkstra().shortPath(g.getVertice(0), g.getOrdem());
