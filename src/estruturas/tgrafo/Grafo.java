@@ -14,20 +14,18 @@ public class Grafo {
 	public Grafo() {
 		listaVertice = new ArrayList<>();
 	}
-	public void addVertice(Double valor, int key) {
+	public void addVertice(int key, Double x, Double y) {
 		//adiciona um novo nodo quando conhece a chave
-		Nodo nodoVertice = new Nodo(valor);
+		Nodo nodoVertice = new Nodo(x, y);
 		listaVertice.add(new Vertice(key, nodoVertice));
 	}
-	public void addVertice(Double valor) {
+	public void addVertice(Double x, Double y) {
 		//adiciona um novo nodo quando não conhece a chave
 		//neste caso as chaves devem ficar sequencias (1, 2, 3, 4)
-		Nodo nodoVertice = new Nodo(valor);
+		Nodo nodoVertice = new Nodo(x, y);
 		int key = listaVertice.size();
 		listaVertice.add(new Vertice(key, nodoVertice));
 	}
-	
-	
 	
 	public int getOrdem() {
 		//retorna a ordem de um grafo (numero de elementos)

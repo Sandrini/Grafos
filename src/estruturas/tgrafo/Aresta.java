@@ -7,17 +7,17 @@ public class Aresta {
 	 * 
 	 */
 
-	private int peso;
+	private double peso;
 	private Vertice v1;
 	private Vertice v2;
 	
-	public Aresta(int peso, Vertice v1, Vertice v2) {
+	public Aresta(double peso, Vertice v1, Vertice v2) {
 		this.peso = peso;
 		this.v1 = v1;
 		this.v2 = v2;
 	}
 	
-	public int getPeso() {
+	public double getPeso() {
 		return peso;
 	}
 	

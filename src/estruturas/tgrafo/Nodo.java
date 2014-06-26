@@ -9,14 +9,22 @@ public class Nodo {
 	 */
 	
 	
-	private Double valor;
+	private Double cordenadaX;
+	private Double cordenadaY;
 	
-	public Nodo(Double valor) {
-		this.valor = valor;
+	public Nodo(Double x, Double y) {
+		this.cordenadaX = x;
+		this.cordenadaY = y;
 	}
 
-	public Double getValor() {
-		return valor;
+	public Double getCordenadaX() {
+		return cordenadaX;
 	}
+
+	public Double getCordenadaY() {
+		return cordenadaY;
+	}
+
+	
 	
 }
