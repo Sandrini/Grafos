@@ -11,12 +11,14 @@ public class Aresta {
 	private Vertice v1;
 	private Vertice v2;
 	private double distancia;
+	private double pesoTotal;
 	
 	public Aresta(double peso, Vertice v1, Vertice v2) {
 		this.peso = peso;
 		this.v1 = v1;
 		this.v2 = v2;
 		distancia = setDistancia();
+		this.pesoTotal = peso + (distancia / 100);
 	}
 	
 	public double getPeso() {
@@ -74,5 +76,9 @@ public class Aresta {
 
 	public double getDistancia() {
 		return distancia;
+	}
+
+	public double getPesoTotal() {
+		return pesoTotal;
 	}
 }

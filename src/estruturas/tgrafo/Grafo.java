@@ -9,7 +9,7 @@ public class Grafo {
 	 * 
 	 * 
 	 */
-	private ArrayList<Vertice> listaVertice;
+	protected ArrayList<Vertice> listaVertice;
 	
 	public Grafo() {
 		listaVertice = new ArrayList<>();
