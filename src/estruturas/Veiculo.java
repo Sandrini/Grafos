@@ -74,7 +74,7 @@ public class Veiculo {
 					}//fim else
 					
 				}//fim if
-			}//fim for
+			}//fim foreach
 			
 			boolean parou = false;
 			String auxMensagem = "";
