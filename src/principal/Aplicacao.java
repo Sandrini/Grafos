@@ -43,11 +43,15 @@ public class Aplicacao {
 		
 		ArrayList<Vertice> listaVertice = new ArrayList<>();
 		
+		for (int i = 0; i < g.getOrdem(); i++) {
+			listaVertice.add(g.getVertice(i));
+		}
+		/*
 		listaVertice.add(g.getVertice(0));
 		listaVertice.add(g.getVertice(1));
 		listaVertice.add(g.getVertice(2));
 		listaVertice.add(g.getVertice(3));
-		
+		*/
 		double[][] vetor = new double[g.getOrdem()][2];
 		vetor = new Logistica().newPath(listaVertice, g.getOrdem());
 		
