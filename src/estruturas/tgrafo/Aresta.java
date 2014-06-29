@@ -36,6 +36,8 @@ public class Aresta {
 			return v1;
 		}
 		//criar excecao
+		System.out.println("Erro ao tentar descobrir o outro lado do vertice "+vertice.getKey()
+				+"\nv1 = "+v1+"v2 = "+v2);
 		return null;
 		
 	}
