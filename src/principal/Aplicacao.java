@@ -1,15 +1,11 @@
 package principal;
 
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import estruturas.Veiculo;
 import estruturas.tgrafo.Aresta;
 import estruturas.tgrafo.Grafo;
-import estruturas.tgrafo.GrafoParada;
-import estruturas.tgrafo.Vertice;
-import algoritmo.*;
 import arquivo.Arquivo;
 
 public class Aplicacao {
